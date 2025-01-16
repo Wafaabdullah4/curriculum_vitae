@@ -10,7 +10,7 @@ import ContactItem from "./ContactItem";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect, useState } from "react";
-import { workExperience, education, languages, organizations, certifications } from '../constants'; 
+import { workExperience, education, languages, organizations, certifications } from '../constants';
 
 
 
@@ -345,13 +345,20 @@ const Profile = () => {
                         >
                             Languages
                         </h2>
-                        <ul className="list-disc pl-6 text-gray-700 dark:text-gray-300">
-                            {languages.map((language, index) => (
-                                <li key={index} data-aos="fade-up" data-aos-delay={100 * (index + 1)}>
-                                    {language}
-                                </li>
-                            ))}
-                        </ul>
+                        <div className="space-y-6">
+                            <div
+                                className="p-4 bg-white rounded-lg shadow-md dark:bg-gray-800 dark:text-white"
+                                data-aos="fade-up"
+                            >
+                                <ul className="list-disc pl-6 text-gray-700 dark:text-gray-300">
+                                    {languages.map((language, index) => (
+                                        <li key={index} data-aos="fade-up" data-aos-delay={100 * (index + 1)}>
+                                            {language}
+                                        </li>
+                                    ))}
+                                </ul>
+                            </div>
+                        </div>
                     </section>
 
                     {/* Organization Section */}
@@ -362,13 +369,20 @@ const Profile = () => {
                         >
                             Organizations
                         </h2>
-                        <ul className="list-disc pl-6 text-gray-700 dark:text-gray-300">
-                            {organizations.map((organization, index) => (
-                                <li key={index} data-aos="fade-up" data-aos-delay={100 * (index + 1)}>
-                                    {organization}
-                                </li>
-                            ))}
-                        </ul>
+                        <div className="space-y-6">
+                            <div
+                                className="p-4 bg-white rounded-lg shadow-md dark:bg-gray-800 dark:text-white"
+                                data-aos="fade-up"
+                            >
+                                <ul className="list-disc pl-6 text-gray-700 dark:text-gray-300">
+                                    {organizations.map((organization, index) => (
+                                        <li key={index} data-aos="fade-up" data-aos-delay={100 * (index + 1)}>
+                                            {organization}
+                                        </li>
+                                    ))}
+                                </ul>
+                            </div>
+                        </div>
                     </section>
 
                     {/* Certifications Section */}
@@ -379,13 +393,21 @@ const Profile = () => {
                         >
                             Certifications
                         </h2>
-                        <ul className="list-disc pl-6 text-gray-700 dark:text-gray-300">
-                            {certifications.map((certification, index) => (
-                                <li key={index} data-aos="fade-up" data-aos-delay={100 * (index + 1)}>
-                                    {certification}
-                                </li>
-                            ))}
-                        </ul>
+                        <div className="space-y-6">
+                            <div
+                                className="p-4 bg-white rounded-lg shadow-md dark:bg-gray-800 dark:text-white"
+                                data-aos="fade-up"
+                            >
+                                <ul className="list-disc pl-6 text-gray-700 dark:text-gray-300">
+                                    {certifications.map((certification, index) => (
+                                        <li key={index} data-aos="fade-up" data-aos-delay={100 * (index + 1)}>
+                                            {certification}
+                                        </li>
+                                    ))}
+                                </ul>
+                            </div>
+                        </div>
+
                     </section>
 
                     <p className="text-center text-sm opacity-80">
